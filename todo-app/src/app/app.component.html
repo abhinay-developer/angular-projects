@@ -1,0 +1,32 @@
+<!--
+      This Project will Cover Event Binding, Two Data Binding,Structural Directive (ngFor) ,Property  Binding
+         
+      [(ngModel)]="todo"   import   FormsModule inside app.module.ts  [imports array]   
+
+
+-->
+<div class="container">
+    <div class="card w-50 mt-5">
+        <div class="card-header bg-primary p-3 text-white ">
+            AJAY TODOS ({{todos.length}})
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <input type="text"  [(ngModel)]="todo" placeholder="add todo" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <button type="button" class="btn btn-primary" (click)="addTodo()" [disabled]="todo.length===0">Add</button>
+                </div>
+            </div>
+
+            <ul class="list-group mt-3">
+                <li class="list-group-item {{(selectedTodo===i)?'active':''}}" *ngFor="let todo of todos;let i=index"
+                    (click)="selectTodo(i)">
+                    {{i+1}}. {{todo}}
+                    <span class="bg-danger p-2  text-white" (click)="deleteTodo(i)">-</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
