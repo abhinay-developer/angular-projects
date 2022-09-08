@@ -16,7 +16,7 @@
                     <input type="text"  [(ngModel)]="todo" placeholder="add todo" class="form-control">
                 </div>
                 <div class="col-md-6">
-                    <button type="button" class="btn btn-primary" (click)="addTodo()" [disabled]="todo.length===0">Add</button>
+                    <button type="button" class="btn btn-primary w-25" (click)="addTodo()" [disabled]="todo.length===0">Add</button>
                 </div>
             </div>
 
@@ -24,9 +24,11 @@
                 <li class="list-group-item {{(selectedTodo===i)?'active':''}}" *ngFor="let todo of todos;let i=index"
                     (click)="selectTodo(i)">
                     {{i+1}}. {{todo}}
-                    <span class="bg-danger p-2  text-white" (click)="deleteTodo(i)">-</span>
+                    <button class="btn btn-danger  float-end  text-white cursor-pointer" (click)="deleteTodo(i)">-</button>
                 </li>
             </ul>
         </div>
     </div>
 </div>
+
+cursor-pointer

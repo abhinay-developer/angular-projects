@@ -1,0 +1,67 @@
+<div class="container">
+
+    <!--
+        1.Structural
+              a.NgIf
+              b.ngFor
+              c.ngSwitch
+        2.Attribute
+            a.ngClass
+            b.ngStyle
+            c.ngModel
+        3.Custom Directive
+    -->
+
+    <h1>Example of ngIf</h1>
+    <div *ngIf="isPresent">
+        {{student}}
+    </div>
+
+    <h1>Example of ngFor</h1>
+    <div>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>AGE</th>
+                    <th>SCHOOL NAME</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let student of studentsList">
+                    <td>{{student.id}}</td>
+                    <td>{{student.name}}</td>
+                    <td>{{student.age}}</td>
+                    <td>{{student.schoolName}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <h1>Example of NgSwicth</h1>
+
+    <div class="col-md-4"><input type="text" class="form-control" [(ngModel)]="colors"></div>
+    <div [ngSwitch]="color" class="mt-5">
+
+        <div *ngSwitchCase="'RED'">
+            <span [ngStyle]="{'background-color':'red','color':'white','padding':'10px'}">RED</span>
+        </div>
+        <div *ngSwitchCase="'BLUE'">
+            <span [ngStyle]="{'background-color':'blue','color':'white','padding':'10px'}">BLUE</span>
+        </div>
+        <div *ngSwitchCase="'ORANGE'">
+            <span [ngStyle]="{'background-color':'orange','color':'white','padding':'10px'}">ORANGE</span>
+        </div>
+        <div *ngSwitchDefault>
+               <span>INVALID COLOR</span>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+   <h1>Calculater App</h1>
+</div>
