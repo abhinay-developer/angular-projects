@@ -1,0 +1,77 @@
+  Routing in angular
+========================
+
+1.Create Angular Application using command      ng new routing-example
+
+2.Clean the Code in app.component.html
+
+3.Create Components  9 components  header,footer,section,home services,about,contact ,login,signup
+
+4.Open command prompt using cntrl+`
+
+5.create component using following command   ng g c header  ..........
+
+6.Go to app.routing.module.ts    and create router Links
+
+7.const routes: Routes = [];
+
+  routes =>variable 
+  Routes => array type
+
+const routes: Routes = [
+  { path:'',component:HomeComponent},
+  { path:'home',component:HomeComponent},
+  { path:'login',component:LoginComponent},
+  { path:'signup',component:SigupComponent},
+  { path:'about',component:AboutComponent},
+  { path:'contact',component:ContactComponent}
+
+];
+
+8.Add bootstrap Links in index.html          (GET LINK FROM   getbootsrap.com) 
+
+
+9. Copy Navbar code from getboostrap.com  place in 
+
+      <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Sign up</a>
+            </li>
+
+ 10. What we created routes path in   app.routing.module.ts   excatly should match with   
+
+             <li class="nav-item">
+                <a class="nav-link" href="signup">Sign up</a>
+            </li>
+
+11. <app-header>   selector need to place in  app.component.html
+         
+    similarly    <app-footer> selector need to place in  app.component.html   ,below the <app-header>
+
+12.
+
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+
+
+ <router-outlet></router-outlet>
+   To Load the components data
+
+
+13. Remove all href attributes and replace with routerLink in a tags in headercomponent.html
+
