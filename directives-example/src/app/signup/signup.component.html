@@ -1,0 +1,54 @@
+<div class="container">
+        {{user | json}}
+    <form>
+        <div class="card mt-5 w-50">
+            <div class="card-header bg-success text-white">
+                <h1>Create Account</h1>
+            </div>
+            <div class="card-body">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" placeholder="Name" class="form-control"
+                        [(ngModel)]="user.name"  #name="ngModel" required="required"
+                         [ngClass]="name.errors?'is-invalid':'is-valid'"
+                        >
+                </div>
+                  <div *ngIf="name.touched&&name.invalid">
+                       <div *ngIf="name.errors.required">
+                             <span class="text-danger">Name is required...</span>
+                       </div>
+                  </div>
+                <div class="form-group mt-2">
+                    <input type="email" name="email" id="email" placeholder="Email" class="form-control"  #email="ngModel" required="required"
+                        [(ngModel)]="user.email"  [ngClass]="email.errors?'is-invalid':'is-valid'">
+                </div>
+                <div *ngIf="email.touched&&email.invalid">
+                    <div *ngIf="email.errors.required">
+                          <span class="text-danger">Email is required...</span>
+                    </div>
+               </div>
+                <div class="form-group mt-2">
+                    <input type="password" name="password" id="password" placeholder="Password" class="form-control" #password="ngModel"required="required"
+                        [(ngModel)]="user.password" [ngClass]="password.errors?'is-invalid':'is-valid'">
+                </div>
+                <div *ngIf="password.touched&&password.invalid">
+                    <div *ngIf="password.errors.required">
+                          <span class="text-danger">Password is required...</span>
+                    </div>
+               </div>
+                <div class="form-group mt-2">
+                    <input type="number" name="mobileNumber" id="mobileNumber" placeholder="Mobile Number" [(ngModel)]="user.mobileNumber" class="form-control" required="required" #mobileNumber="ngModel"
+                    [ngClass]="mobileNumber.errors?'is-invalid':'is-valid'"
+                    >
+                </div>
+                <div *ngIf="mobileNumber.touched&&mobileNumber.invalid">
+                    <div *ngIf="mobileNumber.errors.required">
+                          <span class="text-danger">MobileNumber is required...</span>
+                    </div>
+               </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-success">SAVE</button>
+            </div>
+        </div>
+    </form>
+</div>
