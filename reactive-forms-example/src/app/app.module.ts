@@ -3,22 +3,14 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FormArrayComponent } from './form-array/form-array.component';
-import { SignupComponent } from './signup/signup.component';
-import { DirectivesComponent } from './directives/directives.component';
-
+import { ReactiveFormsModule} from '@angular/forms'
 @NgModule({
   declarations: [
-     AppComponent,
-     FormArrayComponent,
-     SignupComponent,
-     DirectivesComponent
+     AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
