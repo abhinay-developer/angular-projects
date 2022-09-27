@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+    background-color: #f2f2f2;
+    display: flex;
+}
+.logo{
+    width: 200px;
+    height: 125px;
+}
+.content{
+    margin-left: 10px;
+}
+ul li{
+    list-style-type: none;
+    display: inline;
+    margin-left: 10px;
+}

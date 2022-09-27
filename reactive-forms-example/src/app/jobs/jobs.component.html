@@ -1,0 +1,70 @@
+<div class="container">
+    <div class="header p-5 mt-5">
+         <div class="logo bg-white p-4">
+            <h1>divami</h1>
+         </div>
+         <div class="content">
+              <h5>Angular Developer</h5>
+              <p>Divami Design Labs</p>
+              <div class="location text-danger">
+                Hyderabad
+              </div>
+              <div class="list-items">
+                  <ul>
+                    <li>Full time</li>
+                    <li>Hyderbad</li>
+                    <li>INR 6 LPA - INR 12 LPA Per year</li>
+                  </ul>
+              </div>
+         </div>
+    </div>
+
+    <div class="jobs-form">
+        {{jobsForm | json}}
+        <form [formGroup]="jobsForm">
+            <div class="row w-75 m-auto">
+                <div class="col-md-6">
+                   <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" formControlName="firstName" class="form-control" >
+                   </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" name="lastName" id="lastName"  formControlName="lastName" class="form-control" >
+                       </div>
+                </div>
+            </div>
+            <div class="row w-75 m-auto">
+                <div class="col-md-6">
+                   <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" class="form-control" formControlName="email">
+                   </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="text" name="phoneNumber" id="phoneNumber" class="form-control" formControlName="phoneNo">
+                       </div>
+                </div>
+            </div>
+            <!-- <div class="row w-75 m-auto">
+                <div class="col-md-6">
+                   <div class="form-group">
+                    <label for="currentCtc">Current CTC</label>
+                     <select formControlName="currentCtc" class="form-select">
+                        <option *ngFor="let lac of laksList" [value]="lac.key">{{lac.value}}</option>
+                     </select>
+                     {{laksList}}
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                       </div>
+                </div>
+            </div> -->
+        </form>
+    </div>
+</div>

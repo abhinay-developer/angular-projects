@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="card mt-5 w-50 m-auto">
+        <div class="card-header bg-dark text-white">
+            <h1>Create Account</h1>
+        </div>
+        <!-- {{signupForm.value | json}} -->
+        <div class="card-body">
+            <form [formGroup]="signupForm">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input type="text" name="firstName" id="firstName" formControlName="firstName"
+                    class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Last Name</label>
+                    <input type="text" name="lastName" id="lastName" formControlName="lastName"
+                    class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Email </label>
+                    <input type="email" name="email" id="email" formControlName="email"
+                    class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Password</label>
+                    <input type="password" name="password" id="password" formControlName="password"
+                    class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="firstName">Phone</label>
+                    <input type="phone" name="phone" id="phone" formControlName="phone"
+                    class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <button type="button" class="btn btn-success" (click)="addAddress()">Add Address</button>
+                </div>
+                <div formArrayName="addresses">
+                    <div  *ngFor="let add of address.controls;let i=index" >
+                       <div [formGroupName]="i">
+                         <span class="text-success fw-bold">Address {{i+1}}</span>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Street Name</label>
+                                <input type="text" name="" id="streetName" class="form-control"
+                                formControlName="streetName"
+                                >
+                            </div>
+                            <div class="col-md-6">
+                                <label for="city">City</label>
+                                <input type="text" name="city" id="city" class="form-control"
+                                formControlName="city"
+                                >
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="country">Country</label>
+                                <input type="text" name="country" id="country" class="form-control"
+                                formControlName="country">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="pincode">Pincode</label>
+                                <input type="text" name="pincode" id="pincode" class="form-control"
+                                formControlName="pincode">
+                            </div>
+                            <div class="col-md-4 mt-4">
+                                <button type="button" class="btn btn-success" (click)=" removeAddress(i)">Remove Address</button>
+                            </div>
+                        </div>
+                       </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+              <button type="submit" (click)="save()" class="btn btn-dark">Save</button>
+        </div>
+    </div>
+</div>
