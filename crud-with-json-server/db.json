@@ -1,0 +1,64 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "firstName": "sai",
+      "lastName": "kumar",
+      "email": "saikumar@example.com",
+      "password": "Sai@123",
+      "phone": "9900889900",
+      "addresses": [
+        {
+          "streetName": "MA",
+          "city": "Los Angels",
+          "country": "USA",
+          "pincode": "5000018"
+        }
+      ]
+    },
+    {
+      "firstName": "ajay",
+      "lastName": "kumar",
+      "email": "ajaykumar@gmail.com",
+      "password": "Ajay@9900",
+      "phone": "8009009990",
+      "addresses": [
+        {
+          "streetName": "Bharat Nagar",
+          "city": "KNR",
+          "country": "IND",
+          "pincode": "505001"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "firstName": "saiteja",
+      "lastName": "maripelly",
+      "email": "sai@gmail.com",
+      "password": "sai@22333",
+      "phone": "9900880088",
+      "addresses": [
+        {
+          "streetName": "sai nagar",
+          "city": "srcl",
+          "country": "IND",
+          "pincode": "505301"
+        },
+        {
+          "streetName": "shiva nagar",
+          "city": "srcl",
+          "country": "IND",
+          "pincode": "505301"
+        },
+        {
+          "streetName": "by nagar",
+          "city": "srcl",
+          "country": "IND",
+          "pincode": "505301"
+        }
+      ],
+      "id": 3
+    }
+  ]
+}

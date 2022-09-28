@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="container">
+    <div class="card mt-5 w-50 m-auto">
+        <div class="card-header bg-dark text-white">
+            <h1>Create Account</h1>
+        </div>
+        <!-- {{signupForm.value | json}} -->
+        <div class="card-body">
+            <div class="alert alert-danger" *ngIf="errorMessage">{{errorMessage}}</div>
+            <form [formGroup]="loginForm">
+                <div class="form-group">
+                    <label for="email">Email </label>
+                    <input type="email" name="email" id="email" formControlName="email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="Password">Password</label>
+                    <input type="password" name="password" id="password" formControlName="password"
+                        class="form-control">
+                </div>
+            </form>
+        </div>
+        <div class="card-footer">
+            <button type="submit" (click)="login()" class="btn btn-dark">Login</button>
+        </div>
+    </div>
+</div>

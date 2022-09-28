@@ -8,19 +8,22 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import {HttpClientModule} from '@angular/common/http';
+import { HomeComponent } from './components/home/home.component';
 @NgModule({
   declarations: [
      AppComponent,
      HeaderComponent,
      FooterComponent,
      SignupComponent,
-     LoginComponent
+     LoginComponent,
+     HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

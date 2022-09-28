@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-signup',
@@ -7,8 +8,8 @@ import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./signup.component.scss'],
 })
 export class SignupComponent implements OnInit {
- public  signupForm: any;
-  constructor(private fb: FormBuilder) {}
+  public signupForm: any;
+  constructor(private fb: FormBuilder, private ds: DataService) {}
 
   public onInitForm() {
     this.signupForm = this.fb.group({
@@ -50,7 +51,15 @@ export class SignupComponent implements OnInit {
     this.addresses().removeAt(index);
   }
 
-  save(){
-    console.log(this.signupForm.value);
+  public save() {
+    this.ds.saveUser(this.signupForm.value).subscribe(
+      (res: any) => {
+        console.log(res);
+        this.signupForm.reset();
+      },
+      (err: any) => {
+        console.log(err);
+      }
+    );
   }
 }
