@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {path:'signup',component:SignupComponent},
+  {path:'signup/:id',component:SignupComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent}
 ];

@@ -59,6 +59,50 @@
         }
       ],
       "id": 3
+    },
+    {
+      "firstName": "karan",
+      "lastName": "kumar",
+      "email": "karan@gmail.com",
+      "password": "karan@123",
+      "phone": "90090080090",
+      "addresses": [
+        {
+          "streetName": "SSA",
+          "city": "SRCL",
+          "country": "IND",
+          "pincode": "505001"
+        },
+        {
+          "streetName": "KUMAR SAI",
+          "city": "SRCL",
+          "country": "IND",
+          "pincode": "505301"
+        }
+      ],
+      "id": 4
+    },
+    {
+      "firstName": "karan",
+      "lastName": "kumar",
+      "email": "karan@gmail.com",
+      "password": "karan@123",
+      "phone": "90090080090",
+      "addresses": [
+        {
+          "streetName": "SSA",
+          "city": "SRCL",
+          "country": "IND",
+          "pincode": "505001"
+        },
+        {
+          "streetName": "KUMAR ",
+          "city": "SRCL",
+          "country": "IND",
+          "pincode": "505301"
+        }
+      ],
+      "id": 5
     }
   ]
 }

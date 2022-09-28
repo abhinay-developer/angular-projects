@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DataService } from './../../services/data.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
   usersList: any[];
 
-  constructor(private ds:DataService) { }
+  constructor(private ds:DataService,private router:Router) { }
 
   ngOnInit(): void {
     this.getAllUsers();
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
         this.getAllUsers();
       }
     )
+  }
+
+  public update(id:any){
+    this.router.navigate(['signup',id])
   }
   
 }
